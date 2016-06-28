@@ -17,6 +17,19 @@ Gulp task for isort.
 npm install gulp-isort
 ```
 
+## Usage
+
+```javascript
+var gulp = require('gulp');
+var gulpIsort = require('gulp-isort');
+
+gulp.task('isort', function () {
+  return gulp.src('**/*')
+    .pipe(gulpIsort())
+    .pipe(gulpIsort.failOnError());
+});
+```
+
 ## License
 
 Gulp Isort is Copyright (c) 2016 sophilabs, inc. It is free software, and may be
